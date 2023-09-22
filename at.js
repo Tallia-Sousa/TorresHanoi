@@ -1,12 +1,12 @@
-function torresDeHanoi(n, origem, aux, destino) {
+function torresDeHanoi(n, origem, aux, dest) {
     if (n === 1) {
-        console.log(`Move disco 1 de ${origem} para ${destino}`);
+        console.log(`Move disco 1 de ${origem} para ${dest}`);
         return;
     }
     
-    torresDeHanoi(n - 1, origem, destino, auxiliar);
-    console.log(`Move disco ${n} de ${origem} para ${destino}`);
-    torresDeHanoi(n - 1, aux, origem, destino);
+    torresDeHanoi(n - 1, origem, dest, aux);
+    console.log(`Move disco ${n} de ${origem} para ${dest}`);
+    torresDeHanoi(n - 1, aux, origem, dest);
 }
 
 
